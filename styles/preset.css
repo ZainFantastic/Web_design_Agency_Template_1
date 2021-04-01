@@ -1,0 +1,77 @@
+:root{
+  /* colors  */
+  --page-bg:#ffffff;
+  --sections-bg:#fafafa;
+  --main-color:#10cab7;
+  --secondary-color:#2c4755;
+  --third-color:#4d4c4c;
+  --gray-color:#5c7281;
+  --sections-heading-color:#f6f6f6;
+
+  /* fonts & weights & line height*/
+  --font:'Work Sans', sans-serif;
+  --light:300;
+  --reg:400;
+  --semi-bold:600;
+  --bold:800;
+  --line-height:2;
+
+  /* padding & margin */
+  --padding:1.5rem;
+  --margin:3.5rem 0;
+}
+
+/* flex */
+.flex-row-jc-ac{
+  display:flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col-jc-ac{
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* grid */
+.grid{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+}
+
+
+/* container */
+.container{
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* small screen */
+@media all and (min-width:768px){
+
+  .container{
+    width:750px;
+  }
+}
+
+/* medium*/
+@media all and (min-width:992px){
+
+  .container{
+    width:970px;
+  }
+}
+
+/* large */
+@media all and (min-width:1200px){
+
+  .container{
+    width:1170px;
+  }
+}
