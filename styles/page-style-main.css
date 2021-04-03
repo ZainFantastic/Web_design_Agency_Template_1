@@ -161,6 +161,7 @@ header .links li{
 .intro-one{
   width:100%;
   height:calc(100vh - 85px);
+  margin-bottom:var(--margin);
   position: relaitve;
   background: url(../assets/landing-pic.jpg) no-repeat scroll center;
   background-position:cover;
@@ -186,8 +187,43 @@ header .links li{
 }
 .intro-text p{
   width:70%;
+  color:var(--secondary-color);
   line-height:var(--line-height);
   margin: 0 auto;
   font-size:1.35rem;
 }
 
+
+/* start intro two */
+.intro-two{
+  padding:var(--padding);
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.intro-two .intro-box{
+  margin:3rem;
+  padding:var(--padding);
+  text-align:center;
+  flex: 1 1 300px;
+  transition:box-shadow 0.4s linear;
+}
+.intro-two .intro-box:hover{
+  box-shadow: 5px 5px 10px rgb(0, 0, 0,0.1);
+}
+
+.intro-two .intro-box i{
+  margin-bottom:2rem;
+}
+.intro-two .intro-box h2{
+  color:var(--secondary-color);
+}
+.intro-box>*{
+  margin:0;
+  line-height:var(--line-height);
+}
+
+
+/* start services*/
