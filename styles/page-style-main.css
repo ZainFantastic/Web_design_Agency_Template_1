@@ -1,4 +1,4 @@
-/* reset  */
+/* Global  */
 html{
   box-sizing:border-box;
   font-family:var(--font);
@@ -10,9 +10,142 @@ html{
 }
 
 body{
+  position:relative;
   background-color:var(--page-bg);
+  overflow-x:hidden;
 }
 
 i{
   color:var(--main-color);
 }
+
+a{
+  text-decoration:none;
+}
+
+img{
+  width:200px;
+}
+
+
+/* start Header */
+header .container{
+  padding-top:var(--padding);
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo, .logo>img{
+  width:125px;
+  display:block;
+}
+
+.menu{
+  width:40px;
+  display:flex;
+  flex-flow:column wrap;
+  align-items:flex-end;
+}
+.menu:hover .links{
+  visibility:visible;
+  box-shadow: -5px 0px 250px  rgb(0, 0, 0,0.3);
+  transform:translateX(0%);
+}
+
+
+.icon{
+  width:100%;
+  cursor: pointer;
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+.icon>span{
+  width:100%;
+  height:5px;
+  display: block;
+  margin-bottom:0.35rem;
+  background-color:var(--gray-color);
+}
+.icon>span:nth-child(2){
+  width:65%;
+  transition:width 0.35s ease-in-out;
+}
+.icon:hover>span:nth-child(2){
+  width:100%;
+}
+
+
+header .links{
+  width:50vw;
+  height:100vh;
+  margin:0;
+  padding:5rem 2.5rem;;
+  visibility:hidden;
+  background-color:var(--secondary-color);
+  color:var(--gray-color);
+  list-style-type:none;
+  text-transform:capitalize;
+  position: fixed;
+  top:0;
+  right:0;
+  transform:translateX(100%);
+  z-index: 1000;
+  transition:all 0.75s;
+}
+/* for bigger screen devices */
+@media all and (min-width:768px){
+  body{
+    overflow-x:hidden;
+  }
+  header .links{
+    width:25vw;
+  }
+}
+
+header .links p{
+  text-align:right;
+  font-size:1.2rem;
+}
+header .links p:last-child{
+  font-size:1rem;
+  position: absolute;
+  bottom:2.5rem;
+  right:2.5rem;
+}
+
+
+header ul{
+  padding:0;
+  margin-bottom:5rem;
+}
+header .links li{
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin:0.75rem 0;
+} 
+.links li a{
+  font-size:1.65rem;
+  color:#ffffff;
+  transition:all 0.35s;
+}
+.page-menu li a:hover{
+  color:var(--main-color);
+  transform: translateX(-5px);
+}
+.page-social .dribble:hover{
+  color:#E94C88;
+  transform: translateX(-5px);
+}
+.page-social .instagram:hover{
+  color:#8a3ab9;
+  transform: translateX(-5px);
+}
+.page-social .twitter:hover{
+  color:#1DA1F2;
+  transform: translateX(-5px);
+}
+
+
