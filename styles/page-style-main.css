@@ -41,6 +41,11 @@ a{
   }
 }
 
+.wrapper>*:not(header){
+  animation: fade-in 1s 1 forwards;
+}
+
+
 /* header animations */
 @keyframes fade-in-logo{
   0%{
@@ -68,9 +73,19 @@ a{
     opacity:1;
   }
 }
+/* scroll down animation */
+@keyframes scroll-down{
+  0%{
+    visibility:visible;
+    opacity:1;
+    transform:translateY(2.5px);
+  }
 
-.wrapper>*:not(header){
-  animation: fade-in 1s 1 forwards;
+  100%{
+    visibility: visible;
+    opacity:0;
+    transform:translateY(10px);
+  }
 }
 
 
@@ -260,7 +275,18 @@ header .links li{
   font-size:1.35rem;
 }
 
+.scroll-down{
+  margin-top:var(--margin);
+}
+.scroll-down .first{
+  visibility:hidden;
+  animation: scroll-down 1s 3s infinite forwards;
+}
 
+.scroll-down .second{
+  visibility:hidden;
+  animation: scroll-down 1s 3.15s  infinite forwards;
+}
 
 /* start intro two */
 .intro-two{
