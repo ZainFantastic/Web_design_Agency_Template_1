@@ -254,6 +254,7 @@ header .links li{
   text-align:center;
 }
 
+/* for mobile & small screen devices */
 @media all and (max-width:767px){
   .section-heading h1{
     font-size:6rem;
@@ -306,13 +307,110 @@ header .links li{
   margin:1rem;
   box-shadow: 2px 0 15px rgba(0 ,0 , 0 , 0.1);
   flex: 0 1 500px;
+  transition: transform 0.25s ease-in-out;
+}
+.portfolio-info .card:hover{
+  transform:translateY(-15px);
 }
 .portfolio-info .card>img{
   max-width:100%;
 }
+
 .card .card-text{
+  position:relative;
   padding:1rem;
   background-color:var(--page-bg);
 }
+.card .card-text::after{
+  content:'';
+  width:100%;
+  height:2px;
+  background-color:var(--main-color);
+  position: absolute;
+  bottom:0;
+  left:0;
+  transform-origin: center ;
+  transform:scale(0);
+  transition: all 0.25s ease-in-out;
+}
+.card:hover .card-text::after{
+  transform:scale(1);
+}
+
 
 /* start about */
+.about{
+  margin-bottom:var(--margin);
+  padding:var(--padding);
+}
+.about-info{
+  flex-wrap:wrap !important;
+  justify-content: space-between;
+}
+.about-info>*{
+  margin:1rem;
+  flex: 0 1 500px;
+}
+
+.about-info .image-about{
+  position:relative;
+}
+.about-info .image-about>img{
+  width:350px;
+  height: 300px;
+  box-shadow: 5px 5px 15px rgba(0 ,0 , 0 , 0.5);
+}
+
+.about-info .image-about .white-block::before {
+  content: '';
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  top: -100px;
+  right: 20px;
+  background-color: var(--page-bg);
+  z-index:1;
+}
+.about-info .image-about::before{
+  content:'';
+  width:80px;
+  height:380px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  background-color:var(--sections-heading-color);
+  z-index:-1;
+}
+.about-info .image-about::after{
+  content:'';
+  width:150px;
+  height:300px;
+  position: absolute;
+  top: -40px;
+  right: 50px;
+  background-color:var(--main-color);
+  z-index:-1;
+}
+
+/* for mobile & small screen devices */
+@media all and (max-width:767px){
+  .about-info .image-about::before,
+  .about-info .image-about::after,
+  .about-info .image-about .white-block::before{
+    display:none;
+  }
+}
+
+.about-info .about-text{
+  line-height: var(--line-height);
+  width:50%;
+  z-index:100;
+}
+.about hr{
+  margin-left:0;
+  width:50%;
+  border-color: var(--main-color);
+}
+
+
+/* start contact */
