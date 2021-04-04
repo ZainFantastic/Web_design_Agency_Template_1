@@ -294,3 +294,25 @@ header .links li{
 
 
 /* start portfolio */
+.portfolio{
+  background-color: var(--sections-bg);
+  margin-bottom:var(--margin);
+}
+
+.portfolio-info{
+  flex-wrap:wrap !important;
+}
+.portfolio-info .card{
+  margin:1rem;
+  box-shadow: 2px 0 15px rgba(0 ,0 , 0 , 0.1);
+  flex: 0 1 500px;
+}
+.portfolio-info .card>img{
+  max-width:100%;
+}
+.card .card-text{
+  padding:1rem;
+  background-color:var(--page-bg);
+}
+
+/* start about */
