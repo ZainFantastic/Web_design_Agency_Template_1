@@ -156,6 +156,7 @@ header .links li{
 }
 
 
+
 /* start intro one */
 .intro-one{
   width:100%;
@@ -166,6 +167,7 @@ header .links li{
   display:flex;
   justify-content:center;
   align-items:flex-start;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0,0.1);
 }
 
 .intro-text {
@@ -178,6 +180,7 @@ header .links li{
   font-size: 5.25rem;
   color:var(--main-color);
 }
+
 /* for mobile & small screen devices */
 @media all and (max-width:767px){
   .intro-text {
@@ -195,6 +198,7 @@ header .links li{
   margin: 0 auto;
   font-size:1.35rem;
 }
+
 
 
 /* start intro two */
@@ -230,6 +234,7 @@ header .links li{
   margin:0;
   line-height:var(--line-height);
 }
+
 
 
 /* start services*/
@@ -295,10 +300,12 @@ header .links li{
 }
 
 
+
 /* start portfolio */
 .portfolio{
   background-color: var(--sections-bg);
   margin-bottom:var(--margin);
+  padding: 5rem 0;
 }
 
 .portfolio-info{
@@ -337,6 +344,7 @@ header .links li{
 .card:hover .card-text::after{
   transform:scale(1);
 }
+
 
 
 /* start about */
@@ -426,7 +434,13 @@ header .links li{
   }
 }
 
+
+
 /* start contact */
+.contact{
+  margin-bottom: var(--margin);
+  background-color:var(--sections-bg);
+}
 .contact-info{
   transform: translateX(-15%);
 }
@@ -446,9 +460,60 @@ header .links li{
   margin:1rem 1rem 1rem -2rem;
   font-size:1.3rem;
 }
+
+@media all and (max-width:767px){
+  .contact-info{
+    transform: translateX(0);
+  }
+  .contact-info h2,
+   .contact-info a{
+    text-align:center;
+    margin:1rem;
+    font-size: 2rem;
+   }
+    .contact-info .social-media p,
+    .contact-info .social-media{
+    width:100%;
+    margin:1rem;
+    flex-wrap:wrap;
+    text-align:center;
+   }
+   .contact-info .social-media a i{
+     font-size:2rem;
+   }
+}
+
+
 .social-media>a i{
   margin:0 1rem;
   color:var(--black-color);
+  transition:all 0.35s;
+}
+.social-media .dribble>i:hover{
+  color:#E94C88;
+}
+.social-media .instagram:hover>i{
+  color:#8a3ab9;
+}
+.social-media .twitter>i:hover{
+  color:#1DA1F2;
 }
 
+
 /* start footer */
+footer{
+  padding:var(--padding);
+  background-color:var(--secondary-color);
+  text-transform:capitalize;
+}
+
+footer p{
+  margin-bottom: 0.5rem;
+  font-size:1.25rem;
+  color:#fff;
+  text-align:center;
+}
+footer p:last-child>a{
+  color:var(--main-color);
+  text-decoration:underline;
+}
