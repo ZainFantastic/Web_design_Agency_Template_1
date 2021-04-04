@@ -4,6 +4,7 @@
   --sections-bg:#fafafa;
   --main-color:#10cab7;
   --secondary-color:#2c4755;
+  --black-color:#1f2021;
   --gray-color:#5c7281;
   --sections-heading-color:#f6f6f6;
 
@@ -17,7 +18,8 @@
 
   /* padding & margin */
   --padding:2rem;
-  --margin:3.5rem;
+  --margin:5rem;
+  --sections-heading-margin:10rem;
 }
 
 /* flex */
@@ -72,5 +74,12 @@
 
   .container{
     width:1170px;
+  }
+
+/* extra large */
+@media all and (min-width:1400px){
+
+  .container{
+    width:1320px;
   }
 }
