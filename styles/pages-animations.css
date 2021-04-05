@@ -33,10 +33,6 @@
   }
 }
 
-.wrapper>*:not(header){
-  animation: fade-in 1s 1 forwards;
-}
-
 
 /* header animations */
 @keyframes fade-in-logo{
