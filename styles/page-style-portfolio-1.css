@@ -247,7 +247,7 @@ header .links li{
   height:calc(80vh - 85px);
   margin-bottom:var(--margin);
   position: relative;
-  background: var(--sections-bg) url(/assets/project_one/top-1.jpg) no-repeat scroll center;
+  background: var(--sections-bg) url(/assets/project_one/page-bg-1.jpg) no-repeat scroll center;
   background-size:cover;
   display:flex;
   justify-content:center;
@@ -334,3 +334,67 @@ header .links li{
 
 
 /* start project gallary */
+
+.project-gallary img{
+  width:100%;
+}
+.project-gallary{
+  margin-bottom:var(--margin);
+  display:grid;
+  row-gap:5rem;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3 , minmax(500px , 1fr))
+}
+
+@media all and (max-width:767px){
+
+  .top , .bottom{
+    display:flex !important;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+ .main-project-bg>*,
+ .top>*,
+ .bottom>*{
+   padding:var(--padding);
+   line-height:var(--line-height);
+ }
+
+.main-project-bg{
+  background:url(/assets/project_one/first-1.jpg) no-repeat scroll center;
+  background-size:cover;
+  width:100%;
+  height:100%;
+  grid-column:1/2;
+  grid-row:1/2;
+}
+
+.top{
+  width:100%;
+  height:100%;
+  grid-column:1/2;
+  grid-row:2/3;
+}
+.top .top-image{
+  background:url(/assets/project_one/second-1.jpg) no-repeat scroll center;
+  background-size:cover;
+  width:100%;
+  height:100%;
+}
+
+.bottom{
+  width:100%;
+  height:100%;
+  grid-column:1/2;
+  grid-row:3/4;
+}
+.bottom-image{
+  background:url(/assets/project_one/third-1.jpg) no-repeat scroll center;
+  background-size:cover;
+  width:100%;
+  height:100%;
+}
