@@ -348,6 +348,26 @@ header .links li{
   flex: 0 1 500px;
   transition: transform 0.25s ease-in-out;
 }
+
+.portfolio-info .portfolio-link{
+  display:block;
+  color:var(--secondary-color);
+  font-size:1.5rem;
+  font-weight:var(--bold);
+  margin-bottom:1rem;
+}
+.portfolio-info .portfolio-link>span{
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.portfolio-info .portfolio-link:hover>span{
+  transform:translateX(5px);
+  visibility: visible;
+  opacity: 1;
+}
+
 .portfolio-info .card:hover{
   transform:translateY(-15px);
 }
