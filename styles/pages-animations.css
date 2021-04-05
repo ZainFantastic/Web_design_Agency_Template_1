@@ -1,0 +1,82 @@
+/* page animation */
+@keyframes fade-in{
+  0%{
+    transform: translateY(-15px);
+    visibility:hidden;
+    opacity:0;
+  }
+
+  100%{
+    transform:translateY(0px);
+    visibility:visible;
+    opacity:1;
+  }
+}
+
+.wrapper>*:not(header){
+  animation: fade-in 1s 1 forwards;
+}
+
+
+/* intro fade in */
+@keyframes intro-fade-in{
+  0%{
+    transform: translateX(-20px);
+    visibility:hidden;
+    opacity:0;
+  }
+
+  100%{
+    transform:translateX(0px);
+    visibility:visible;
+    opacity:0.8;
+  }
+}
+
+.wrapper>*:not(header){
+  animation: fade-in 1s 1 forwards;
+}
+
+
+/* header animations */
+@keyframes fade-in-logo{
+  0%{
+    transform: translateX(-15px);
+    visibility:hidden;
+    opacity:0;
+  }
+
+  100%{
+    transform:translateX(0px);
+    visibility:visible;
+    opacity:1;
+  }
+}
+@keyframes fade-in-menu-icon{
+  0%{
+    transform: translateX(15px);
+    visibility:hidden;
+    opacity:0;
+  }
+
+  100%{
+    transform:translateX(0px);
+    visibility:visible;
+    opacity:1;
+  }
+}
+
+/* scroll down animation */
+@keyframes scroll-down{
+  0%{
+    visibility:visible;
+    opacity:1;
+    transform:translateY(2.5px);
+  }
+
+  100%{
+    visibility: visible;
+    opacity:0;
+    transform:translateY(10px);
+  }
+}
